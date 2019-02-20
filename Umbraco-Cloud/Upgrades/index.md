@@ -47,7 +47,7 @@ This describes how an Umbraco Cloud project is auto-upgraded:
 * The upgrader will verify that the new http status code returned from the Dev site’s home page is OK and will verify that the html contents of the home page match that of the snapshot originally taken. 
 * If either of these tests fail we will be notified and Umbraco will take appropriate measures to rollback the site to it’s previous state
 * The failed upgrade is then tracked for reporting and the customer will be notified if necessary
-* When the Dev site is upgraded successfully, the upgrader will continue this same process for the next environment in the chain (i.e. Dev -> Staging -> Live) depending on the number of environments that exist for the project.
+* When the Dev site is upgraded successfully, the upgrader will continue this same process for the next environment in the chain (i.e. Dev -> Staging -> Live) depending on the number of environments that exist for the project. This procces of upgrading the next-in-line environment will not happen if you're doing a minor upgrade.
 
 ## Minor version upgrades
 
